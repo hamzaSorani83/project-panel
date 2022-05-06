@@ -1,0 +1,148 @@
+.Sidebar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    transition: all .4s;
+    padding-left: 30px;
+}
+
+.Sidebar.Close span {
+    opacity: 0;
+}
+
+.Sidebar.Open span {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .Sidebar span {
+        opacity: 0;
+    }
+    .Sidebar.Open span {
+        opacity: 1 !important;
+    }
+}
+
+.Sidebar .Sidebar_Logo {
+    height: 150px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: opacity .5s;
+}
+
+.Sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    min-height: 100%;
+    background-color: var(--second-color);
+}
+
+@media (max-width: 600px) {
+    .Sidebar {
+        padding-left: 10px;
+    }
+}
+
+.Close {
+    padding-left: 10px !important;
+}
+
+.Sidebar .Sidebar_Logo>img {
+    height: 45px;
+}
+
+.Sidebar .Sidebar_Logo>svg {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.Sidebar .Sidebar_Logo {
+    animation: runLogo 0.3s linear;
+}
+
+@keyframes runLogo {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Sidebar .Sidebar_Logo>span {
+    color: var(--txt-color);
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 20px;
+    word-spacing: -1px;
+    transition: opacity .5s;
+}
+
+.Sidebar .Sidebar_Item_Inner {
+    padding: 15px 25px;
+    display: flex;
+    align-Items: center;
+    font-weight: 600;
+    transition: color 0.3s ease 0s;
+}
+
+.Sidebar .Sidebar_Item_Inner>svg {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.Sidebar .Sidebar_Item_Inner>span {
+    text-transform: capitalize;
+    transition: opacity .5s;
+}
+
+.Sidebar .Sidebar_Item_Inner:hover {
+    color: var(--main-color);
+}
+
+.Sidebar .Active .Sidebar_Item_Inner {
+    border-radius: var(--border-radius);
+    background-image: linear-gradient( to right, var(--main-color), var(--second-color));
+    color: var(--txt-white);
+    position: relative;
+}
+
+.Sidebar .Active .Sidebar_Item_Inner::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0px var(--second-color);
+}
+
+.Sidebar .Active .Sidebar_Item_Inner::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0px var(--second-color);
+}

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;700&family=Roboto:wght@100;300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .7px;
+    overflow-x: hidden;
+}
+
+:root {
+    /*  */
+    --main-bg: #2d2d2d;
+    --second-bg: #202020;
+    --txt-color: #bbbbbb;
+    --txt-white: #fff;
+    --box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    --box-shadow-color: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+    --main-color: #349eff;
+    --second-color: #62b4ff;
+    /* light */
+    --main-bg-light: #ffffff;
+    --second-bg-light: #fafafb;
+    --txt-color-light: #455560;
+    --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* dark */
+    --main-bg-dark: #2d2d2d;
+    --second-bg-dark: #202020;
+    --txt-color-dark: #bbbbbb;
+    --box-shadow-dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+    /* blue */
+    --main-color-blue: #349eff;
+    --second-color-blue: #62b4ff;
+    --box-shadow-blue: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+    /* red */
+    --main-color-red: #ff055a;
+    --second-color-red: #ff3157;
+    --box-shadow-red: 0 0 0 0.25rem rgb(225 83 97 / 50%);
+    /* cyan */
+    --main-color-cyan: #10d4d2;
+    --second-color-cyan: #2ae9e6;
+    --box-shadow-cyan: 0 0 0 0.25rem rgb(67 221 220);
+    --main-color-green: #99f2c8;
+    --second-color-green: #23e3ae;
+    --box-shadow-green: 0 0 0 0.25rem rgb(153 242 200 / 50%);
+    /* orange */
+    --main-color-orange: #FFB830;
+    --second-color-orange: #fca11a;
+    --box-shadow-orange: 0 0 0 0.25rem rgb(217 164 6 / 50%);
+    /*  */
+    --sidebar-width: 300px;
+    --border-radius: 15px;
+    --topnav-height: 110px;
+    --transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /*  */
+    --gradient: linear-gradient( 135deg, #0078d7, #0076d4, #0072cc, #006cc1, #0064b3, #005ba3, #005292, #004982, #004174, #003b69, #003761, #00355e);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: var(--txt-color);
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+li.nav-item:hover a {
+    color: var(--main-color) !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    border: 2px solid transparent;
+    outline: 0;
+}
+
+input:focus {
+    border: 2px solid var(--main-color);
+}
+
+.page-header {
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.card {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.full-height {
+    height: 100%;
+}
+
+.card.full-height {
+    height: calc(100% - 30px);
+}
+
+.card__header {
+    text-transform: capitalize;
+}
+
+.card>div~div {
+    margin-top: 30px;
+}
+
+.card__footer {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.light-background {
+    background-color: var(--main-bg-light);
+    color: #000;
+}
+
+.dark-background {
+    background-color: var(--main-bg-dark);
+    color: #fff;
+}
+
+.blue-color {
+    background-color: var(--main-color-blue);
+    color: #fff;
+}
+
+.second-blue-color {
+    background-color: #62b4ff;
+    color: #fff;
+}
+
+.red-color {
+    background-color: var(--main-color-red);
+    color: #fff;
+}
+
+.cyan-color {
+    background-color: var(--main-color-cyan);
+    color: #fff;
+}
+
+.green-color {
+    background-color: var(--main-color-green);
+    color: #fff;
+}
+
+.orange-color {
+    background-color: var(--main-color-orange);
+    color: #fff;
+}
+
+.theme-mode-light {
+    --main-bg: var(--main-bg-light);
+    --second-bg: var(--second-bg-light);
+    --txt-color: var(--txt-color-light);
+    --box-shadow: var(--box-shadow-light);
+}
+
+.theme-mode-dark {
+    --main-bg: var(--main-bg-dark);
+    --second-bg: var(--second-bg-dark);
+    --txt-color: var(--txt-color-dark);
+    --box-shadow: var(--box-shadow-dark);
+}
+
+.theme-color-blue {
+    --main-color: var(--main-color-blue);
+    --second-color: var(--second-color-blue);
+    --box-shadow-color: var(--box-shadow-blue)
+}
+
+.theme-color-red {
+    --main-color: var(--main-color-red);
+    --second-color: var(--second-color-red);
+    --box-shadow-color: var(--box-shadow-red)
+}
+
+.theme-color-cyan {
+    --main-color: var(--main-color-cyan);
+    --second-color: var(--second-color-cyan);
+    --box-shadow-color: var(--box-shadow-cyan)
+}
+
+.theme-color-green {
+    --main-color: var(--main-color-green);
+    --second-color: var(--second-color-green);
+    --box-shadow-color: var(--box-shadow-green)
+}
+
+.theme-color-orange {
+    --main-color: var(--main-color-orange);
+    --second-color: var(--second-color-orange);
+    --box-shadow-color: var(--box-shadow-orange)
+}
+
+.second-bg {
+    background-color: var(--second-bg) !important;
+}
+
+.main-color {
+    color: var(--main-color)
+}
+
+.txt-color {
+    color: var(--txt-color)
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--second-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--second-color);
+}
+
+.btn-primary:hover {
+    box-shadow: var(--box-shadow-color) !important;
+}
+
+.dark-background .add-project {
+    box-shadow: var(--box-shadow-dark);
+}
+
+.light-background .add-project {
+    box-shadow: var(--box-shadow-light);
+}
+
+.page-item.disabled {
+    cursor: no-drop
+}
+
+.btn.disabled {
+    cursor: no-drop;
+}
+
+.removeSectionBtn {
+    position: absolute;
+    height: 30px;
+    /* left: 1000px; */
+    right: -200px;
+    top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    transition: all .5s;
+}
+
+.section:nth-child(2) .removeSectionBtn {
+    display: none;
+}
+
+.section:hover .removeSectionBtn {
+    right: 7px !important;
+    opacity: 1;
+}

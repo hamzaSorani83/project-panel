@@ -1,0 +1,58 @@
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: 0.25rem;
+    border-radius: 0.25rem;
+    --bs-text-opacity: 1;
+    --bs-primary-rgb: 13, 110, 253;
+    border-left-color: var(--main-color)
+}
+
+.dark-background .accodrion {
+    background-color: var(--main-bg);
+    color: var(--txt-color)
+}
+
+.dark-background .accordion-item {
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow-light);
+}
+
+.light-background .accordion-item {
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.accordion-button svg:first-child {
+    color: var(--main-color);
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    z-index: 9;
+    transform: rotate(180deg);
+}
+
+.accordion-button {
+    background-color: var(--second-bg);
+    color: var(--txt-color);
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    background-color: var(--second-bg);
+    color: var(--main-color);
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) svg:first-child {
+    transform: rotate(0);
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    width: 0;
+    height: 0;
+}
